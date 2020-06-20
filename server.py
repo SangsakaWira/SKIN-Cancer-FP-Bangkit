@@ -9,7 +9,11 @@ from flask import request
 import json 
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 CORS(app)
+
+UPLOAD_FOLDER = '/uploads'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
  
 # load model
 model = load_model('model_fp59.h5')
@@ -26,7 +30,18 @@ def predict_post():
     print("JSON: "+str(request_data))
     try:
         if request.method == 'POST':
-           
+            if 'file' not in request.files:
+                flash('No file part')
+                return redirect(request.url)
+            file = request.files['file']
+            # if user does not select file, browser also
+            # submit a empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+                return redirect(request.url)
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             
         return jsonify({'result':predicted[0],'msg':'success'})
     except ValueError:
