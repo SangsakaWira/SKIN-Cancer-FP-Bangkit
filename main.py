@@ -95,4 +95,5 @@ def predict_post():
     except AttributeError:
         return jsonify({'result':"Server is Down!"})
 
-app.run(host='0.0.0.0',port=3500)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0',port=3500)
