@@ -19,7 +19,27 @@ For details of the dataset used, visit [this link](https://www.isic-archive.com)
 Downloading, extracting, and placing the model in the assets folder is managed
 automatically.
 
-### Installing
+## Running Skin Cancer API Server
+
+Based on the results from the test model, we get the value of accuracy.
+
+Install the environtment
+
+```
+conda env create -f environment.yml
+```
+
+Get into the environtment
+```
+conda activate gpu-fp
+```
+
+run the app (make sure you are at the app root directory)
+```
+python server.py
+```
+
+### Installing (if you don't have python yet)
 
 1. Install Python
 ```
@@ -65,25 +85,6 @@ Accuracy
 ### Techniques
 
 We use CNN architecture and image augmentation to train models with an accuracy rate of up to 73%
-
-### Installing Skin Cancer API Server
-Based on the results from the test model, we get the value of accuracy.
-
-Install the environtment
-
-```
-conda env create -f environment.yml
-```
-
-Get into the environtment
-```
-conda activate gpu-fp
-```
-
-run the app (make sure you are at the app root directory)
-```
-python server.py
-```
 
 ## Requirements
 
