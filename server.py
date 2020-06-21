@@ -68,7 +68,9 @@ def predict_post():
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 image = load_image("uploads/"+filename)
-                model.predict(image)
+                predicted = model.predict(image)
+                hasil = load_predict(predicted)
+                return jsonify({'result':hasil,'msg':'success'})
 
             
         return jsonify({'result':predicted[0],'msg':'success'})
