@@ -24,7 +24,7 @@ automatically.
 
 ## Running Skin Cancer API Server
 
-Based on the results from the test model, we get the value of accuracy.
+Dermiscan application link is http://dermiscan.co.id and mobile app link: https://github.com/simplephi/dermascan_application
 
 Install the environtment
 
