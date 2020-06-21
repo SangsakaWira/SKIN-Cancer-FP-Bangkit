@@ -6,7 +6,10 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-predicted = np.array([0., 0., 0., 1.])
-print(predicted)
-index = predicted.index(1.)
-print(index)
+class Model(Resource):
+    def get(self,image):
+        return {'result':image}
+
+api.add_resource(Model,"/model/<string:image>")
+
+app.run(port=5000)
