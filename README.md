@@ -5,6 +5,9 @@ According to the World Health Organization (WHO), The incidence of both non-mela
 
 This is an application that can make it easier for doctors and the general public to be able to predict skin diseases by taking pictures of the skin with a smartphone camera.
 
+![Landing and Mobile App](web-mobile.PNG)
+
+
 ### Dataset & Model
 
 We provide a dataset bundled in this App: Final Project Model based on
