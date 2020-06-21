@@ -6,6 +6,7 @@ channels:
 dependencies:
   - _tflow_select=2.1.0=gpu
   - absl-py=0.9.0=py37_0
+  - aniso8601=8.0.0=py_0
   - astor=0.8.0=py37_0
   - attrs=19.3.0=py_0
   - backcall=0.2.0=py_0
@@ -13,9 +14,9 @@ dependencies:
   - bleach=3.1.5=py_0
   - blinker=1.4=py37_0
   - brotlipy=0.7.0=py37he774522_1000
-  - ca-certificates=2020.4.5.2=hecda079_0
+  - ca-certificates=2020.6.20=hecda079_0
   - cachetools=4.1.0=py_1
-  - certifi=2020.4.5.2=py37hc8dfbb8_0
+  - certifi=2020.6.20=py37hc8dfbb8_0
   - cffi=1.14.0=py37h7a1dbc1_0
   - chardet=3.0.4=py37_1003
   - click=7.1.2=py_0
@@ -27,6 +28,9 @@ dependencies:
   - decorator=4.4.2=py_0
   - defusedxml=0.6.0=py_0
   - entrypoints=0.3=py37_0
+  - flask=1.1.2=py_0
+  - flask-cors=3.0.8=py_0
+  - flask-restful=0.3.8=py_0
   - freetype=2.9.1=ha9979f8_1
   - gast=0.2.2=py37_0
   - google-auth=1.14.1=py_0
@@ -45,6 +49,7 @@ dependencies:
   - ipython=7.15.0=py37_0
   - ipython_genutils=0.2.0=py37_0
   - ipywidgets=7.5.1=py_0
+  - itsdangerous=1.1.0=py37_0
   - jedi=0.17.0=py37_0
   - jinja2=2.11.2=py_0
   - jpeg=9d=he774522_0

@@ -66,6 +66,25 @@ Accuracy
 
 We use CNN architecture and image augmentation to train models with an accuracy rate of up to 73%
 
+### Installing Skin Cancer API Server
+Based on the results from the test model, we get the value of accuracy.
+
+Install the environtment
+
+```
+conda env create -f environment.yml
+```
+
+Get into the environtment
+```
+conda activate gpu-fp
+```
+
+run the app (make sure you are at the app root directory)
+```
+python server.py
+```
+
 ## Requirements
 
 *   Run it with [GoogleColab](https://colab.research.google.com/)
