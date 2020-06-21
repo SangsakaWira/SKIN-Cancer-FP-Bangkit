@@ -7,6 +7,8 @@ This is an application that can make it easier for doctors and the general publi
 
 ![Landing and Mobile App](web-mobile.PNG)
 
+You can also predict via the website 
+![Landing and Predict](web-predict.PNG)
 
 ### Dataset & Model
 
