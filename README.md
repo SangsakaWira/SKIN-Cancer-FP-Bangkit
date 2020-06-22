@@ -5,9 +5,10 @@ According to the World Health Organization (WHO), The incidence of both non-mela
 
 This is an application that can make it easier for doctors and the general public to be able to predict skin diseases by taking pictures of the skin with a smartphone camera.
 
+You can download the app on google play here is the link: https://play.google.com/store/apps/details?id=org.tensorflow.lite.codedirect.dermiscan
 ![Landing and Mobile App](web-mobile.PNG)
 
-You can also predict via the website 
+You can also predict via the website at dermiscan.co.id
 ![Landing and Predict](web-predict.PNG)
 
 ### Dataset & Model

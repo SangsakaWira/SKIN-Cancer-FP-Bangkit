@@ -45,13 +45,14 @@ def allowed_file(filename):
 
 # load and return class
 def load_predict(predicted):
+    # [0.,0.,0.,0.,1.]
     print("this one: "+str(predicted))
     print("this one 1.0: "+str(predicted[5]))
     print(type(predicted))
     predicted = np.array(predicted).tolist()
     class_index = predicted.index(1.)
     print(class_index)
-    classes = ["Melanocytic Nevi","Melanoma","Benign Keratosis-like Lesions","Basal Cell Carcinoma","Actinic Keratoses","Vascular Lesions","Dermatofibroma","Squamous Cell Carcinoma"]
+    classes = ["Actinic Keratoses","Basal Cell Carcinoma","Benign Keratosis-like Lesions","Dermatofibroma","Melanoma","Melanocytic Nevi","Squamous Cell Carcinoma","Vascular Lesions"]
     result = classes[class_index]
     return result
 
@@ -81,10 +82,10 @@ def predict_post():
                 flash('No selected file')
                 return redirect(request.url)
             if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = secure_filename(file.filename) #check extension
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 image_path = "./uploads/"+filename
-                image = load_image(image_path)
+                image = load_image(image_path) #convert image
                 predicted = model.predict(image)
                 hasil = load_predict(predicted[0])
                 return jsonify({'result':str(hasil),'msg':'success'})
